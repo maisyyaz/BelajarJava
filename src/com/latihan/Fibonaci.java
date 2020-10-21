@@ -58,9 +58,11 @@ public class Fibonaci {
 
         System.out.print("N angka ke: ");
         angkaKeN = input.nextInt();
+
 //      cetak angka ke 1 dan 2
         System.out.print(angka1 + " ");
         System.out.print(angka2 + " ");
+
 //      perulangan angka ke 3 sampai n
         while (angkaKeN > 2) {
             hasil = angka1 + angka2;
