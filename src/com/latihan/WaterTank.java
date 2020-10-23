@@ -46,12 +46,12 @@ public class WaterTank {
 
         System.out.print("Masukkan kapasitas Water Tank: ");
         kapasitasWaterTank = in.nextDouble();
-        System.out.println("[1] Gelas , 1 Liter ");
-        System.out.println("[2] Ember , 10 Liter ");
-        System.out.println("[3] Galon , 16 Liter ");
-        System.out.println("[4] Tangan, 0.2 Liter ");
 
         do {
+            System.out.println("[1] Gelas , 1 Liter ");
+            System.out.println("[2] Ember , 10 Liter ");
+            System.out.println("[3] Galon , 16 Liter ");
+            System.out.println("[4] Tangan, 0.2 Liter ");
             System.out.print("Pilih alat [1-4]: ");
             alat = in.nextInt();
 
@@ -73,7 +73,7 @@ public class WaterTank {
                     kapasitasAlat = 0.2;
                     break;
                 default:
-                    kapasitasAlat = 0;
+                    kapasitasAlat = 0.0;
                     break;
             }
 
@@ -82,9 +82,9 @@ public class WaterTank {
 
             if (watertank > kapasitasWaterTank) {
                 lebih = watertank - kapasitasWaterTank;
-                System.out.println("Alat yang dipilih adalah " + namaAlat + " water tank sekarang berisi " + watertank + " liter lebih " + lebih + " liter dari kapasitas water tank.");
+                System.out.println("Alat yang dipilih adalah " + namaAlat + ", water tank sekarang berisi " + watertank + " liter lebih " + lebih + " liter dari kapasitas water tank.");
             } else {
-                System.out.println("Alat yang dipilih adalah " + namaAlat + " water tank sekarang berisi " + watertank + " liter.");
+                System.out.println("Alat yang dipilih adalah " + namaAlat + ", water tank sekarang berisi " + watertank + " liter.");
             }
 
             if (watertank < kapasitasWaterTank - 1) {
