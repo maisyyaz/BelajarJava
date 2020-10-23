@@ -39,21 +39,62 @@ public class WaterTank {
         air.run();
     }
     void run() {
-        double kapasitasWaterTank, watertank = 0, kapasitasAlat, lebih;
-        int alat, isianKe = 0;
+        double kapasitasWaterTank, watertank = 0, kapasitasAlat;
+        int alat = 0, isianKe = 0, n;
         String namaAlat = "";
-        System.out.println("Aplikasi menghitung berapa banyak alat yang bisa mengisi water tank");
+        System.out.println("Aplikasi menghitung berapa banyak alat yang bisa mengisi water tank\n");
 
         System.out.print("Masukkan kapasitas Water Tank: ");
         kapasitasWaterTank = in.nextDouble();
 
         do {
-            System.out.println("[1] Gelas , 1 Liter ");
-            System.out.println("[2] Ember , 10 Liter ");
-            System.out.println("[3] Galon , 16 Liter ");
-            System.out.println("[4] Tangan, 0.2 Liter ");
-            System.out.print("Pilih alat [1-4]: ");
-            alat = in.nextInt();
+            if (watertank <= kapasitasWaterTank) {
+                if (watertank + 16 <= kapasitasWaterTank) {
+                    System.out.println("[1] Gelas , 1 Liter ");
+                    System.out.println("[2] Ember , 10 Liter ");
+                    System.out.println("[3] Galon , 16 Liter ");
+                    System.out.println("[4] Tangan, 0.2 Liter ");
+                    System.out.print("Pilih alat [1-4]: ");
+                    alat = in.nextInt();
+                } else if (watertank + 10 <= kapasitasWaterTank) {
+                    System.out.println("[1] Gelas , 1 Liter ");
+                    System.out.println("[2] Ember , 10 Liter ");
+                    System.out.println("[3] Tangan, 0.2 Liter ");
+                    System.out.print("Pilih alat [1-3]: ");
+                    n = in.nextInt();
+                    switch (n) {
+                        case 1:
+                            alat = 1;
+                            break;
+                        case 2:
+                            alat = 2;
+                            break;
+                        case 3:
+                            alat = 4;
+                            break;
+                    }
+                } else if (watertank + 1 <= kapasitasWaterTank) {
+                    System.out.println("[1] Gelas , 1 Liter ");
+                    System.out.println("[2] Tangan, 0.2 Liter ");
+                    System.out.print("Pilih alat [1-2]: ");
+                    n = in.nextInt();
+                    switch (n) {
+                        case 1:
+                            alat = 1;
+                            break;
+                        case 2:
+                            alat = 4;
+                            break;
+                    }
+                } else if (watertank + 0.2 <= kapasitasWaterTank) {
+                    System.out.println("[1] Tangan, 0.2 Liter ");
+                    System.out.print("Pilih alat [1]: ");
+                    n = in.nextInt();
+                    if (n == 1) {
+                        alat = 4;
+                    }
+                }
+            }
 
             switch (alat) {
                 case 1:
@@ -80,12 +121,7 @@ public class WaterTank {
             watertank = watertank + kapasitasAlat;
             isianKe = isianKe + 1;
 
-            if (watertank > kapasitasWaterTank) {
-                lebih = watertank - kapasitasWaterTank;
-                System.out.println("Alat yang dipilih adalah " + namaAlat + ", water tank sekarang berisi " + watertank + " liter lebih " + lebih + " liter dari kapasitas water tank.");
-            } else {
-                System.out.println("Alat yang dipilih adalah " + namaAlat + ", water tank sekarang berisi " + watertank + " liter.");
-            }
+            System.out.println("Alat yang dipilih adalah " + namaAlat + ", water tank sekarang berisi " + watertank + " liter.");
 
             if (watertank < kapasitasWaterTank - 1) {
                 System.out.println("Ulangi hingga penuh!");
@@ -93,7 +129,7 @@ public class WaterTank {
 
         } while (watertank < kapasitasWaterTank);
 
-        System.out.println("Isi watertank sudah penuh, proses pengisian dilakukan sebanyak " + isianKe + " kali.");
+        System.out.println("\nIsi watertank sudah penuh, proses pengisian dilakukan sebanyak " + isianKe + " kali.");
 
     }
 }
