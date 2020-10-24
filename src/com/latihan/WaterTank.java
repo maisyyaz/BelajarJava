@@ -39,13 +39,15 @@ public class WaterTank {
         air.run();
     }
     void run() {
-        double kapasitasWaterTank, watertank = 0, kapasitasAlat;
+        double kapasitasWaterTank, watertank = 0, kapasitasAlat, sisa;
         int alat = 0, isianKe = 0, n;
         String namaAlat = "";
         System.out.println("Aplikasi menghitung berapa banyak alat yang bisa mengisi water tank\n");
 
         System.out.print("Masukkan kapasitas Water Tank: ");
         kapasitasWaterTank = in.nextDouble();
+
+        sisa = kapasitasWaterTank;
 
         do {
             if (watertank <= kapasitasWaterTank) {
@@ -117,13 +119,14 @@ public class WaterTank {
                     kapasitasAlat = 0.0;
                     break;
             }
-
             watertank = watertank + kapasitasAlat;
+            sisa = sisa - kapasitasAlat;
             isianKe = isianKe + 1;
 
-            System.out.println("Alat yang dipilih adalah " + namaAlat + ", water tank sekarang berisi " + watertank + " liter.");
+            System.out.println("Alat yang dipilih adalah " + namaAlat + ", water tank sekarang berisi " + watertank + " liter,.");
 
-            if (watertank < kapasitasWaterTank - 1) {
+            if (watertank <= kapasitasWaterTank - 1) {
+                System.out.println("sisanya " + sisa + " Liter lagi.");
                 System.out.println("Ulangi hingga penuh!");
             }
 
