@@ -17,7 +17,7 @@ public class PerulanganPerkalian {
                 System.out.println(hitung + " x "+ perkalian + " = " + hasil);
             }
         } else {
-            System.out.println("Maaf, nilai perkalian harus diantara 1 - 10!");
+            System.out.println("Maaf, nilai perkalian harus diantara 1 - 10");
         }
     }
 }

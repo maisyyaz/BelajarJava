@@ -13,19 +13,23 @@ public class SegitigaAngka {
         n = in.nextInt();
 
         baris = 1;
-        while (baris <= n) {
-            spasi = n;
-            while (spasi > baris) {
-                System.out.print(" ");
-                spasi--;
+        if (n >= 1 && n <= 100) {
+            while (baris <= n) {
+                spasi = n;
+                while (spasi > baris) {
+                    System.out.print(" ");
+                    spasi--;
+                }
+                kolom = 1;
+                while (kolom <= baris) {
+                    System.out.print(baris+ " ");
+                    kolom++;
+                }
+                System.out.println();
+                baris++;
             }
-            kolom = 1;
-            while (kolom <= baris) {
-                System.out.print(baris+ " ");
-                kolom++;
-            }
-            System.out.println();
-            baris++;
+        } else {
+            System.out.println("Angka harus 1 - 100");
         }
     }
 }

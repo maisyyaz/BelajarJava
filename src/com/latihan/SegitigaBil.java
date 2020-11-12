@@ -13,18 +13,22 @@ public class SegitigaBil {
 
         hitung = 0;
         baris = 0;
-        while (baris < batas) {
-            kolom = 0;
-            while (kolom <= baris) {
-                if (hitung > 9) {
-                    hitung = 0;
+        if (batas >= 1 && batas <= 100) {
+            while (baris < batas) {
+                kolom = 0;
+                while (kolom <= baris) {
+                    if (hitung > 9) {
+                        hitung = 0;
+                    }
+                    System.out.print(hitung + " ");
+                    hitung++;
+                    kolom++;
                 }
-                System.out.print(hitung + " ");
-                hitung++;
-                kolom++;
+                System.out.println();
+                baris++;
             }
-            System.out.println();
-            baris++;
+        } else {
+            System.out.println("Jumlah baris harus 1 - 100");
         }
     }
 }

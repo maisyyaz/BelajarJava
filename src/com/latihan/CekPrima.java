@@ -13,15 +13,20 @@ public class CekPrima {
 
         hitung = 0;
         bagi = 1;
-        while (bagi <= angka) {
-            if (angka % bagi == 0) {
-                hitung++;
+
+        if (angka >= 1 && angka <= 1000) {
+            while (bagi <= angka) {
+                if (angka % bagi == 0) {
+                    hitung++;
+                }
+                bagi++;
             }
-            bagi++;
+
+            String prima = hitung == 2 ? ("Ya, " + angka + " adalah bilangan prima") : ("Tidak, " + angka + " bukan bilangan prima");
+
+            System.out.println(prima);
+        } else {
+            System.out.println("Angka harus 1 - 1000");
         }
-
-        String prima = hitung == 2 ? ("Ya, " + angka + " adalah bilangan prima") : ("Tidak, " + angka + " bukan bilangan prima");
-
-        System.out.println(prima);
     }
 }
