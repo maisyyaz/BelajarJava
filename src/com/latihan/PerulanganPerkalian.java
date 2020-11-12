@@ -11,9 +11,13 @@ public class PerulanganPerkalian {
         System.out.print("Masukkan nilai perkalian: ");
         perkalian = in.nextInt();
 
-        for (int hitung = 1; hitung <= 10; hitung++) {
-            hasil = hitung * perkalian;
-            System.out.println(hitung + " x "+ perkalian + " = " + hasil);
+        if (perkalian > 0 && perkalian <= 10) {
+            for (int hitung = 1; hitung <= 10; hitung++) {
+                hasil = hitung * perkalian;
+                System.out.println(hitung + " x "+ perkalian + " = " + hasil);
+            }
+        } else {
+            System.out.println("Maaf, nilai perkalian harus diantara 1 - 10!");
         }
     }
 }

@@ -14,7 +14,7 @@ public class PolaBintang {
 
 //      pola persegi
         baris = 0;
-        System.out.println("a. Pola Persegi\n");
+        System.out.println("a. Pola Persegi");
         while (baris < n) {
             kolom = 0;
             while (kolom < n) {
@@ -29,7 +29,7 @@ public class PolaBintang {
         System.out.println();
 
 //      pola segitiga 1
-        System.out.println("b. Pola Segitiga 1\n");
+        System.out.println("b. Pola Segitiga 1");
         baris = 0;
         while (baris < n) {
             kolom = 0;
@@ -44,7 +44,7 @@ public class PolaBintang {
         System.out.println();
 
 //      pola segitiga 2
-        System.out.println("c. Pola Segitiga 2\n");
+        System.out.println("c. Pola Segitiga 2");
         baris = n;
         while (baris > 0) {
             kolom = baris;
@@ -60,7 +60,7 @@ public class PolaBintang {
         System.out.println();
 
 //      pola segitiga 3
-        System.out.println("d. Pola Segitiga 3\n");
+        System.out.println("d. Pola Segitiga 3");
         baris = n;
         while (baris > 0) {
             spasi = n;
@@ -80,7 +80,7 @@ public class PolaBintang {
         System.out.println();
 
 //      pola segitiga 4
-        System.out.println("e. Pola Segitiga 4\n");
+        System.out.println("e. Pola Segitiga 4");
         baris = 0;
         while (baris < n) {
             spasi = n - 1;
