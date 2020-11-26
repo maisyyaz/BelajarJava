@@ -26,7 +26,7 @@ public class PerkalianMatriks {
         System.out.println("Hasil Matriksnya");
         for (int baris = 0; baris < n; baris++) {
             for (int kolom = 0; kolom < n; kolom++) {
-                System.out.print((dataAngka[baris][kolom]*kali)+" ");
+                System.out.print((dataAngka[baris][kolom]*kali)+"\t");
             }
             System.out.println();
         }
