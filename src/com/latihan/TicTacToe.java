@@ -110,7 +110,7 @@ public class TicTacToe {
                         if (papan[i][j] == 0) {
                             player = "?";
                             break;
-                        } else {
+                        } else if (papan[i][j] != 0) {
                             player = "-";
                         }
                     }
