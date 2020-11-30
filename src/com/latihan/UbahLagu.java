@@ -14,40 +14,39 @@ public class UbahLagu {
     }
 
     public static String ubahLagu(String lagu) {
-        char[] vokal = {'a', 'i', 'u', 'e', 'o'};
-        String ubah = lagu;
         int jumlahKarakter = lagu.length();
+        char vokal;
+        String simpanUbah;
+        switch (jumlahKarakter % 5) {
+            case 0:
+                vokal = 'a';
+                simpanUbah = ubahVokal(vokal, lagu);
+                break;
+            case 1:
+                vokal = 'e';
+                simpanUbah = ubahVokal(vokal, lagu);
+                break;
+            case 2:
+                vokal = 'i';
+                simpanUbah = ubahVokal(vokal, lagu);
+                break;
+            case 3:
+                vokal = 'o';
+                simpanUbah = ubahVokal(vokal, lagu);
+                break;
+            default:
+                vokal = 'u';
+                simpanUbah = ubahVokal(vokal, lagu);
+                break;
+        }
+        return simpanUbah;
+    }
 
-        if (jumlahKarakter % 5 == 0) {
-            for (char c : vokal) {
-                if (c != 'a') {
-                    ubah = ubah.replace(c, 'a');
-                }
-            }
-        } else if (jumlahKarakter % 5 == 1) {
-            for (char c : vokal) {
-                if (c != 'e') {
-                    ubah = ubah.replace(c, 'e');
-                }
-            }
-        } else if (jumlahKarakter % 5 == 2) {
-            for (char c : vokal) {
-                if (c != 'i') {
-                    ubah = ubah.replace(c, 'i');
-                }
-            }
-        } else if (jumlahKarakter % 5 == 3) {
-            for (char c : vokal) {
-                if (c != 'o') {
-                    ubah = ubah.replace(c, 'o');
-                }
-            }
-        } else {
-            for (char c : vokal) {
-                if (c != 'u') {
-                    ubah = ubah.replace(c, 'u');
-                }
-            }
+    public static String ubahVokal(char vokal, String lagu) {
+        char[] dataVokal = {'a', 'i', 'u', 'e', 'o'};
+        String ubah = lagu;
+        for (char c : dataVokal) {
+            ubah = ubah.replace(c, vokal);
         }
         return ubah;
     }

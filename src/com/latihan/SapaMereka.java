@@ -11,8 +11,12 @@ public class SapaMereka {
 
         int time = in.nextInt();
 
-        System.out.println(sapa(nama1, time));
-        System.out.println(sapa(nama2, time));
+        cetakSapa(nama1, time);
+        cetakSapa(nama2, time);
+    }
+
+    public static void cetakSapa(String nama, int time) {
+        System.out.println(sapa(nama, time));
     }
 
     public static String waktu(int time) {
