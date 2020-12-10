@@ -15,11 +15,11 @@ public class SapaMereka {
         cetakSapa(nama2, time);
     }
 
-    public static void cetakSapa(String nama, int time) {
+    private static void cetakSapa(String nama, int time) {
         System.out.println(sapa(nama, time));
     }
 
-    public static String waktu(int time) {
+    private static String waktu(int time) {
         if (time >= 6 && time <= 11) {
             return "pagi";
         } else if (time >= 12 && time <= 14) {
@@ -31,7 +31,7 @@ public class SapaMereka {
         }
     }
 
-    public static String sapa(String nama, int time) {
+    private static String sapa(String nama, int time) {
         return "Halo, "+ nama + ". Selamat "+ waktu(time)+".";
     }
 }

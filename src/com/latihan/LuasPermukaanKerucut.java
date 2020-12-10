@@ -17,7 +17,7 @@ public class LuasPermukaanKerucut {
     }
 
     public static double luasPermukaanKerucut(int h, int r) {
-        final double pi = 3.14;
+        final double pi = Math.PI;
         return pi * r * (r + Math.sqrt(Math.pow(r, 2) + Math.pow(h, 2)));
     }
 }

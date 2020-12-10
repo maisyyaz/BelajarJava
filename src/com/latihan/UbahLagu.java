@@ -13,7 +13,7 @@ public class UbahLagu {
         System.out.println(ubahLagu(lagu));
     }
 
-    public static String ubahLagu(String lagu) {
+    private static String ubahLagu(String lagu) {
         int jumlahKarakter = lagu.length();
         char vokal;
         String simpanUbah;
@@ -42,7 +42,7 @@ public class UbahLagu {
         return simpanUbah;
     }
 
-    public static String ubahVokal(char vokal, String lagu) {
+    private static String ubahVokal(char vokal, String lagu) {
         char[] dataVokal = {'a', 'i', 'u', 'e', 'o'};
         String ubah = lagu;
         for (char c : dataVokal) {
