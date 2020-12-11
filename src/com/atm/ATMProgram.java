@@ -1,5 +1,6 @@
-package com.atm.progate;
+package com.atm;
 
+import com.atm.progate.Customer;
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -112,7 +113,7 @@ public class ATMProgram {
                     System.out.println("Resi tercetak otomatis saat anda keluar. \nHarap simpan tanda terima ini \nsebagai bukti transaksi anda.");
                     System.out.println("No. record: " + (100000 + (int) (Math.random() * 1000)));
                     System.out.println("Tanggal: " + LocalDate.now());
-                    System.out.println("Saldo akhir: " + atm.cekSaldo());
+                    System.out.println("Saldo akhir: Rp. " + atm.cekSaldo());
                     System.out.println("Terima kasih telah menggunakan ATM Progate");
                     System.exit(0);
                     break;
